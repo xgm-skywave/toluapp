@@ -25,10 +25,10 @@ local function pp_dofile(path)
 		end
 	end
 
-	local f = load(getfile, path)
+	local f, errmsg = load(getfile, path)
 	if not f then
 	
-		error("error loading file "..path)
+		error("error loading file "..path ..": " .. errmsg)
 	end
 	return f()
 end
