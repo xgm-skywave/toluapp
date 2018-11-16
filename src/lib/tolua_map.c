@@ -262,7 +262,6 @@ static int tolua_bnd_setpeer(lua_State* L) {
 
 		lua_pop(L, 1);
 		lua_pushvalue(L, TOLUA_NOPEER);
-	};
 	}
 #if LUA_VERSION_NUM > 501
 	lua_setuservalue(L, -2);
